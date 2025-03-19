@@ -1,0 +1,31 @@
+﻿@model ScooterApplication.Models.ScooterWheelLife
+
+@{
+    ViewBag.Title = "Scooter Maximum Distance Calculator";
+    //var test = Model.MaxDistance;
+}
+
+<h2 class="text-center mb-4">Scooter Maximum Distance Calculator</h2>
+<div class="card p-4 shadow-lg rounded">
+    @using (Html.BeginForm("Calculate", "Scooter", FormMethod.Post))
+    {
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Wheel1, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.Wheel1, new { @class = "form-control", placeholder = "Enter life cycle for Wheel 1" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Wheel2, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.Wheel2, new { @class = "form-control", placeholder = "Enter life cycle for Wheel 2" })
+        </div>
+        <div class="mb-3">
+            @Html.LabelFor(m => m.Spare, new { @class = "form-label" })
+            @Html.TextBoxFor(m => m.Spare, new { @class = "form-control", placeholder = "Enter life cycle for Spare Wheel" })
+        </div>
+        <button type="submit" class="btn btn-primary w-100 mb-3">Calculate</button>
+    }
+    <div class="mb-3">
+        @Html.LabelFor(m => m.MaxDistance, new { @class = "form-label" })
+        @Html.TextBoxFor(m => m.MaxDistance, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+</div>
+
