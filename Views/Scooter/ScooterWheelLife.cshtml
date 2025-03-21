@@ -12,11 +12,15 @@
         <div class="mb-3">
             @Html.LabelFor(m => m.Wheel1, new { @class = "form-label" })
             @Html.TextBoxFor(m => m.Wheel1, new { @class = "form-control", placeholder = "Enter life cycle for Wheel 1" })
+            @Html.ValidationMessageFor(m => m.Wheel1, "", new { @class = "text-danger" })
         </div>
+
         <div class="mb-3">
             @Html.LabelFor(m => m.Wheel2, new { @class = "form-label" })
             @Html.TextBoxFor(m => m.Wheel2, new { @class = "form-control", placeholder = "Enter life cycle for Wheel 2" })
+            @Html.ValidationMessageFor(m => m.Wheel2, "", new { @class = "text-danger" })
         </div>
+
         <div class="mb-3">
             @Html.LabelFor(m => m.Spare, new { @class = "form-label" })
             @Html.TextBoxFor(m => m.Spare, new { @class = "form-control", placeholder = "Enter life cycle for Spare Wheel" })
